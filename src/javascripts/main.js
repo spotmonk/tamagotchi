@@ -1,3 +1,8 @@
 import '../styles/main.scss';
+import bones from './bones';
 
-console.error('test');
+const init = () => {
+  bones.setBones();
+};
+
+init();

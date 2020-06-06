@@ -1,0 +1,28 @@
+
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.num {
+  font-size: 50px;
+}
+.buttonsDiv{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 20px 40px; 
+  font-size: 22px;
+}
+
+.totalSlider {
+  width: 100%;
+  ::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  background: url('../img/monster.png');
+  }
+}
