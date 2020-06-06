@@ -18,11 +18,21 @@
   font-size: 22px;
 }
 
-.totalSlider {
-  width: 100%;
-  ::-webkit-slider-thumb{
+#total{
   -webkit-appearance: none;
-  appearance: none;
-  background: url('../img/monster.png');
-  }
+  width: 100%;
+  background-color: orange !important;
+  
+}
+#total::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url('../img/monster.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
 }

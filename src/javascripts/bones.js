@@ -18,6 +18,7 @@ const setBones = () => {
 
   const sliderstring = '<input type="range" id="total" class="totalSlider" min="0" max="10" disabled="true">';
   utils.printToDom('#progress', sliderstring);
+  document.querySelector('#total').value = 3;
   utils.printNumbers();
 };
 
