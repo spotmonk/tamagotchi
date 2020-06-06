@@ -1,3 +1,45 @@
+@mixin zone {
+  flex: 35%;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid orange;
+  text-align: center;
+  justify-content: space-between;
+
+  
+}
+
+
 body {
   background-color: rebeccapurple;
+}
+#app {
+  display: flex; 
+  flex: 2;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  #progress{
+    @include zone;
+    flex: 100%;
+  }
+  .quad { @include zone; }
+   
+  #fight{
+    order: 6;
+  }
+  #sleep{
+    order: 6;
+  }
+
+   
+  #pet{
+    
+    flex: 100%;
+    // height: 500px;
+    text-align: center;
+    order: 1;
+  }
 }
