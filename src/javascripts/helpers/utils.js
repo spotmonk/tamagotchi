@@ -12,4 +12,8 @@ const printNumbers = () => {
   printToDom('#sleepnum', numbers[0].energy);
 };
 
-export default { printToDom, printNumbers };
+function randomNumberRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+export default { printToDom, printNumbers, randomNumberRange };
