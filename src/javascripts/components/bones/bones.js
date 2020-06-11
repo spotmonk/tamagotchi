@@ -1,7 +1,8 @@
-import utils from './helpers/utils';
+import utils from '../../helpers/utils';
 import './bones.scss';
-import monster from '../assets/monster.png';
-import stats from './helpers/data/stats';
+import monster from '../../../assets/monster.png';
+import stats from '../../helpers/data/stats';
+import buttonfunc from '../buttonfunc/buttonfunc';
 
 const popButtons = () => {
   const buttons = document.querySelectorAll('.btn');
@@ -9,6 +10,7 @@ const popButtons = () => {
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].innerHTML = buttonText[i];
   }
+  buttons.forEach((button) => button.addEventListener('click', buttonfunc.buttonclick));
 };
 
 const setBones = () => {
