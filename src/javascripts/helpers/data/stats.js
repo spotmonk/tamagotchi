@@ -1,13 +1,17 @@
 const stats = [
   {
     eat: 100,
-    play: 50,
+    fun: 50,
     strength: 100,
     energy: 50,
   },
 
 ];
 
+const buttons = ['🥗', '🍦', '⚽️', ' 🎱', '🏃💨', '⚔️', '😴', '🛌'];
+
 const getStats = () => stats;
 
-export default { getStats };
+const getButtons = () => buttons;
+
+export default { getStats, getButtons };
