@@ -12,8 +12,57 @@ const printNumbers = () => {
   printToDom('#sleepnum', numbers[0].energy);
 };
 
-function randomNumberRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-export default { printToDom, printNumbers, randomNumberRange };
+const checkProgress = () => {
+  const numbers = stats.getStats();
+  let num = 0;
+  switch (true) {
+    case (numbers[0].eat === 100):
+      num += 2;
+      break;
+    case (numbers[0].eat === 0):
+      num += 0;
+      break;
+    default:
+      num += 1;
+  }
+  switch (true) {
+    case (numbers[0].fun === 100):
+      num += 2;
+      break;
+    case (numbers[0].fun === 0):
+      num += 0;
+      break;
+    default:
+      num += 1;
+  }
+  switch (true) {
+    case (numbers[0].strength === 100):
+      num += 2;
+      break;
+    case (numbers[0].strength === 0):
+      num += 0;
+      break;
+    default:
+      num += 1;
+  }
+  switch (true) {
+    case (numbers[0].energy === 100):
+      num += 2;
+      break;
+    case (numbers[0].energy === 0):
+      num += 0;
+      break;
+    default:
+      num += 1;
+  }
+  document.querySelector('#total').value = num;
+};
+
+export default {
+  printToDom,
+  printNumbers,
+  randomNumberRange,
+  checkProgress,
+};

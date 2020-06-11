@@ -28,9 +28,9 @@ const setBones = () => {
   const imgstring = `<img src=${monster}>`;
   utils.printToDom('#pet', imgstring);
 
-  const sliderstring = '<input type="range" id="total" class="totalSlider" min="0" max="10" disabled="true">';
+  const sliderstring = '<div id="sad">😭</div><input type="range" id="total" class="totalSlider" min="0" max="8" disabled="true"><div id="happy">😁</div>';
   utils.printToDom('#progress', sliderstring);
-  document.querySelector('#total').value = 3;
+  utils.checkProgress();
   utils.printNumbers();
   popButtons();
 };

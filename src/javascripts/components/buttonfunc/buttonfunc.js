@@ -10,44 +10,38 @@ const buttonclick = (e) => {
       stats.updateStat('eat', 10);
       stats.updateStat('energy', utils.randomNumberRange(-15, -1));
       stats.updateStat('fun', utils.randomNumberRange(-15, -1));
-      utils.printNumbers();
       break;
     case '🍦':
       stats.updateStat('eat', -3);
       stats.updateStat('strength', utils.randomNumberRange(-15, -1));
-      utils.printNumbers();
       break;
     case '⚽️':
       stats.updateStat('fun', 50);
-      utils.printNumbers();
       break;
     case '🎱':
       stats.updateStat('fun', 2);
-      utils.printNumbers();
       break;
     case '🏃💨':
       stats.updateStat('strength', 1);
       stats.updateStat('energy', utils.randomNumberRange(1, 15));
       stats.updateStat('fun', utils.randomNumberRange(-15, -1));
-      utils.printNumbers();
       break;
     case '⚔️':
       stats.updateStat('strength', -10);
       stats.updateStat('energy', utils.randomNumberRange(-15, -1));
       stats.updateStat('eat', utils.randomNumberRange(-15, -1));
       stats.updateStat('fun', utils.randomNumberRange(-15, -1));
-      utils.printNumbers();
       break;
     case '😴':
       stats.updateStat('energy', 50);
-      utils.printNumbers();
       break;
     case '🛌':
       stats.updateStat('energy', 60);
-      utils.printNumbers();
       break;
     default:
   }
+  utils.printNumbers();
+  utils.checkProgress();
 };
 
 export default { buttonclick };
