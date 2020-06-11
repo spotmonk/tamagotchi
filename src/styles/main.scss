@@ -24,6 +24,7 @@ body {
   #progress{
     @include zone;
     flex: 100%;
+    display: flex;
   }
   .quad { @include zone; }
    
